@@ -99,6 +99,7 @@ if "%LUA%"=="luajit" (
 		)
 
 		cd downloads\lua-%LUA_VER%
+		echo Compat flag is %COMPATFLAG%
 		call etc\winmake %COMPATFLAG%
 		call etc\winmake install %LUA_DIR%
 	) else (
