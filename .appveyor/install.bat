@@ -19,7 +19,7 @@ if "%LUA_VER%" NEQ "" (
 if "%LUA%"=="luajit" (
 	set LUA_DIR=c:\lua\%platform%\lj%LJ_SHORTV%
 ) else (
-	set LUA_DIR=c:\lua\%platform%\%LUA_VER%
+	set LUA_DIR=c:\lua\%platform%\%LUA_VER%%NOCOMPAT%
 )
 
 :: Now we declare a scope
