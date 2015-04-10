@@ -99,7 +99,6 @@ if "%LUA%"=="luajit" (
 		)
 
 		cd downloads\lua-%LUA_VER%
-		echo Compat flag is %COMPATFLAG%
 		call etc\winmake %COMPATFLAG%
 		call etc\winmake install %LUA_DIR%
 	) else (
@@ -168,6 +167,7 @@ if "%LUA%"=="luajit" (
 	echo Installation of LuaJIT %LJ_VER% and LuaRocks %LUAROCKS_VER% done.
 ) else (
 	echo Installation of Lua %LUA_VER% and LuaRocks %LUAROCKS_VER% done.
+	if defined NOCOMPAT echo Lua was built with compatibility flags disabled.
 )
 echo Platform         - %platform%
 echo LUA              - %LUA%
